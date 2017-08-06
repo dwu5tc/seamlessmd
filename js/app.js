@@ -45,6 +45,7 @@ myApp.getPatientData = () => {
 
 myApp.addDisplayPatientListener = () => {
 	$(".patient").on("click", ".patient-data__get", () => {
+		console.log("clicked get");
 		$.when(myApp.getPatientData())
 		.then(function(resp) {
 			console.log(resp);
@@ -52,6 +53,7 @@ myApp.addDisplayPatientListener = () => {
 		});
 	});
 	$(".patient").on("click", ".patient-data__reset", () => {
+		console.log("clicked reset");
 		$(".patient").html(`
 			<div class="patient-data">
 				<button class="patient-data__get"><span>Get Patient Data</span></button>
