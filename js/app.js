@@ -2,10 +2,12 @@ var myApp = {}
 
 myApp.init = () => {
 	myApp.addDisplayPatientListener();
+	console.log("done init");
 }
 
 $(function() {
 	myApp.init();
+	console.log("done done");
 });
 
 myApp.parsePatientData = (resp) => {
@@ -60,4 +62,5 @@ myApp.addDisplayPatientListener = () => {
 			</div>
 		`);
 	});
+	console.log("added listeners");
 }
