@@ -2,12 +2,10 @@ var myApp = {}
 
 myApp.init = () => {
 	myApp.addDisplayPatientListener();
-	console.log("done init");
 }
 
 $(function() {
 	myApp.init();
-	console.log("done done");
 });
 
 myApp.parsePatientData = (resp) => {
@@ -47,20 +45,16 @@ myApp.getPatientData = () => {
 
 myApp.addDisplayPatientListener = () => {
 	$(".patient").on("click", ".patient-data__get", () => {
-		console.log("clicked get");
 		$.when(myApp.getPatientData())
 		.then(function(resp) {
-			console.log(resp);
 			myApp.displayPatientData(myApp.parsePatientData(resp));
 		});
 	});
 	$(".patient").on("click", ".patient-data__reset", () => {
-		console.log("clicked reset");
 		$(".patient").html(`
 			<div class="patient-data">
 				<button class="patient-data__get"><span>Get Patient Data</span></button>
 			</div>
 		`);
 	});
-	console.log("added listeners");
 }
