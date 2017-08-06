@@ -3,17 +3,22 @@
 <head>
 	<meta charset="UTF-8">
 	<title>SeamlessMD</title>
+	<style>
+		p {
+			text-transform: capitalize;
+		}
+		p > span {
+			font-weight: 600;
+			text-transform: none;
+		}
+	</style>
 </head>
 	<main>
 		<section class="patient">
 			<div class="patient-data">
-				<button class="patient-data__button"><span>Get Patient Data</span></button>
-			</div>
-			<div class="patient-data__display">
-				
+				<button class="patient-data__get"><span>Get Patient Data</span></button>
 			</div>
 		</section>
-		
 	</main>
 <body>
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
